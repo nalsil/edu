@@ -68,7 +68,8 @@ if api_key:
         )
 
         # 최신 응답 표시
-        assistant_message = messages.data[0].content[0].text.value
+        # assistant_message = messages.data[0].content[0].text.value
+        assistant_message = messages
         st.session_state.messages.append({"role": "assistant", "content": assistant_message})
         with st.chat_message("assistant"):
             st.markdown(assistant_message)
